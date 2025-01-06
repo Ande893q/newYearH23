@@ -5,7 +5,6 @@ class Rocket {
   PVector velocity = new PVector(angle, -3);
   
 
-
   // konstruktør
   Rocket() {
     
