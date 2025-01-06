@@ -25,4 +25,13 @@ hej christian
   velocity.x+=0.1;
   
   }
+  
+  void boom(){}
+}
+
+class Anders extends Rocket{
+
+void boom(){
+// min version
+}
 }
