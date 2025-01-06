@@ -1,6 +1,6 @@
 
 
-Rocket r;
+Rocket r;  //min raket
 
 
 void setup() {
