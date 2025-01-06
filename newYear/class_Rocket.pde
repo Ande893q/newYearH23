@@ -4,7 +4,7 @@ class Rocket {
   float angle=random(1, 7);
   PVector velocity = new PVector(angle, -3);
   
-
+hej christian
 
   // konstruktør
   Rocket() {
