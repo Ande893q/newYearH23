@@ -21,8 +21,8 @@ class Rocket {
   
   void move(){
   pos.add(velocity);
-  velocity.y+=0.1;
-  velocity.x+=0.1;
+  velocity.y-=0.15;
+  velocity.x+=0.05;
   
   }
 }
