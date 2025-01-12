@@ -32,11 +32,17 @@ class Rocket {
 class Anders extends Rocket{
 
 void boom(){
+  int timer=0;
   float diameter=200;
   float placeHeight=random(200,height);
   float placeWidth=random(200,width);
+  
+  
+  if(timer<frameRate*15){
   for(int i=0;i<100;i++){
   circle(placeHeight,placeWidth,diameter);
+  timer=timer+1;  
+  }
   }
 }
 }
