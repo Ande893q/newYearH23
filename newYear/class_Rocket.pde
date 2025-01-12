@@ -33,9 +33,10 @@ class Anders extends Rocket{
 
 void boom(){
   float diameter=200;
-  circle(width/2,height/2,diameter);
+  float placeHeight=random(200,height);
+  float placeWidth=random(200,width);
   for(int i=0;i<100;i++){
-  line(width/2,height/2,diameter);
+  circle(placeHeight,placeWidth,diameter);
   }
 }
 }
