@@ -18,10 +18,12 @@ void setup() {
 void draw() {
   int fcboom = 80;
   background (0);
+
   if (frameCount>fcboom) {
     r3.boom();
   } else {
     r3.display();
     r3.move();
+
   }
 }
