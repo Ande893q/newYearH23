@@ -20,15 +20,19 @@ class Rocket {
   
   void move(){
   pos.add(velocity);
-  velocity.y+=0.1;
-  velocity.x+=0.1;
+  velocity.y=-6;
+  velocity.x=0.9;
   
+  
+  if (velocity.y<-5){
+  velocity.y=-2;
   }
   
-}
-
-class rocket2 extends rocket
-
-void boom(){
+  if (velocity.x<0){
+  velocity.x=0.5;
+  }
+  
+  
+  }
   
 }
