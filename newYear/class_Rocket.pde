@@ -43,7 +43,7 @@ class Anders extends Rocket {
     
 
     if (frameCount<frameRate*5) {
-      fill(255-cycle/1.2, 255-cycle/1.2, 255-cycle/1.2);
+      fill(255-cycle/1.2, 255, 255);
       circle(width/2, height/2, boomDiameter);
       fill(c);
       circle(placeWidth1, placeHeight1, boomDiameter*random(0, 2));
