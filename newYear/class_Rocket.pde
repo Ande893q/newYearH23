@@ -34,5 +34,22 @@ class Rocket {
   
   
   }
-  
+  void explode(){}
 }
+
+class Jaunius extends Rocket{
+int diameter;
+  int alfa;
+
+class MyRocket extends Rocket {
+  @Override
+    void explode(){
+    
+    fill(255, 0, 0, alfa) ;
+ellipse(pos.x,pos.y,diameter*2,diameter*2);
+  }
+}
+}
+
+ 
+  
