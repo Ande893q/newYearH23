@@ -17,7 +17,6 @@ class Rocket {
     circle(pos.x, pos.y, diameter);
   }
 
-
   void move() {
     pos.add(velocity);
     velocity.y+=0.1;
