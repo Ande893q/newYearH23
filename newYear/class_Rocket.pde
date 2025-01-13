@@ -4,6 +4,8 @@ class Rocket {
   float angle=random(1, 7);
   PVector velocity = new PVector(angle, -3);
 
+  // konstruktør
+  Rocket() {
     // konstruktør
     Rocket() {
   }
@@ -18,9 +20,17 @@ class Rocket {
   
   void move(){
   pos.add(velocity);
+  velocity.y=-6;
+  velocity.x=0.9;
+  
+  if (velocity.y<-5){
+  velocity.y=-2;
   velocity.y-=0.15;
   velocity.x+=0.05;
   }
+  
+  if (velocity.x<0){
+  velocity.x=0.5;
 
   void boom() {
   }
@@ -51,9 +61,31 @@ class Anders extends Rocket {
       circle(placeWidth2, placeHeight2, boomDiameter*random(0, 2));
       
     }
+
  colorMode(RGB);
+
+  }
+  
+  
+  }
+  void explode(){}
+}
+
+
+class Jaunius extends Rocket{
+int diameter;
+  int alfa;
+
+class MyRocket extends Rocket {
+  @Override
+    void explode(){
+    
+    fill(255, 0, 0, alfa) ;
+ellipse(pos.x,pos.y,diameter*2,diameter*2);
   }
 }
+}
+
   
 class Simon extends Rocket {
 
@@ -79,4 +111,5 @@ class Simon extends Rocket {
     }
 }
 }
+
   
