@@ -30,6 +30,7 @@ class Rocket {
 
 class Anders extends Rocket {
 
+
   void boom() {
     colorMode(HSB);
     float cycle =frameCount;
@@ -49,6 +50,6 @@ class Anders extends Rocket {
       circle(placeWidth2, placeHeight2, boomDiameter*random(0, 2));
       
     }
-    
+ 
   }
 }
