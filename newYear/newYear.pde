@@ -20,4 +20,10 @@ void draw() {
   r2.display();
   r2.move();
   r2.boom();
+  if(frameCount < 30) {
+    r3.move();
+    r3.display();
+  } else {
+    r3.boom();
+  }
 }
