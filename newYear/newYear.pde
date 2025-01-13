@@ -17,10 +17,13 @@ void setup() {
 
 void draw() {
   background (0);
-  r2.display();
-  r2.move();
-  r2.boom();
   if(frameCount < 30) {
+    r2.move();
+    r2.display();
+  } else {
+    r2.boom();
+  }
+   if(frameCount < 30) {
     r3.move();
     r3.display();
   } else {
