@@ -1,7 +1,7 @@
 class Magnus extends Rocket {
   boolean exploded = false;
   int frameCounter;
-  void explode(int r, int g, int b, int alpha, int diameter) {
+  void explode(int r, int g, int b, int alpha, int diameter, float posX, float posY) {
     noStroke();
     
     fill(r, g, b, alpha);
@@ -10,7 +10,7 @@ class Magnus extends Rocket {
       float radius = random(diameter, diameter * 2);
       float xOffset = cos(angle) * radius;
       float yOffset = sin(angle) * radius;
-      ellipse(pos.x + xOffset, pos.y + yOffset, random(5, 15), random(5, 15));
+      ellipse(posX + xOffset, posY + yOffset, random(5, 15), random(5, 15));
     }
     strokeWeight(1);
   }
@@ -28,7 +28,11 @@ class Magnus extends Rocket {
       exploded = true;
     }
     if(frameCount < frameCounter + 60) {
-      explode(r, g, b, alpha, diameter);
+      explode(r, g, b, alpha, diameter, pos.x, pos.y);
+      explode(r, g, b, alpha, diameter, pos.x + random(25, 43), pos.y + random(25, 43));
+      explode(r, g, b, alpha, diameter, pos.x - random(25, 43), pos.y - random(25, 43));
+      explode(r, g, b, alpha, diameter, pos.x - random(25, 43), pos.y + random(25, 43));
+      explode(r, g, b, alpha, diameter, pos.x + random(25, 43), pos.y - random(25, 43));
       diameter += 2;
       alpha = max(0, alpha - 50);
     }
