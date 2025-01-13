@@ -1,16 +1,11 @@
 Rocket r;  //min raket
-
 Anders r2;
-
 Simon r3;
-Magnus r3;
-
-
-fred996v rf;
-
+Magnus r4;
+fred996v r5;
 Jaunius r1;
 
-
+int counter=0;
 
 void setup() {
 
@@ -18,39 +13,46 @@ void setup() {
   r = new Rocket();
   r1= new Jaunius();
   r2= new Anders();
-  r3 = new Magnus();
-
-  rf = new fred996v();
-
-  r2=new Anders();
-  r3=new Simon();
+  r3 = new Simon();
   r4 = new Magnus();
-
+  r5 = new fred996v();
+  //r6 = new Jaunius();
 }
 
 void draw() {
-  int fcboom = 80;
-  background (0);
 
-  r.display();
-  r.move();
-  r1.display();
-  r1.move();
-  r2.display();
-  r2.move();
-  r2.boom();
-  
-  if (frameCount>fcboom) {
-    r3.boom();
-  } else {
-    r3.display();
-    r3.move();
+  background (0);
+  if (counter == 0) {
+    fireRocket(r1);
+  }
+
+  if (counter == 1) {
+    fireRocket(r2);
+  }
+  if (counter == 2) {
+    fireRocket(r3);
+  }
+  if (counter == 3) {
+    fireRocket(r4);
+  }
+  if (counter == 4) {
+    fireRocket(r5);
   }
   
-  if (frameCount>60) {
-      rf.boom();
-    } else {
-      rf.display();
-      rf.move();
-    }
+}
+
+
+
+void fireRocket(Rocket r) {
+  int fcboom = 80;
+  if (frameCount>fcboom) {
+    r.boom();
+  } else {
+    r.display();
+    r.move();
+  }
+}
+
+void mousePressed() {
+  counter++;
 }
