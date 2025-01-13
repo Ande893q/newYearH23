@@ -24,4 +24,11 @@ class Rocket {
   velocity.x+=0.1;
   
   }
+  
+}
+
+class rocket2 extends rocket
+
+void boom(){
+  
 }

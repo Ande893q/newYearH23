@@ -2,6 +2,8 @@
 
 Rocket r;
 
+Rocket2 r2;
+
 
 void setup() {
   
