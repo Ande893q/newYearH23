@@ -16,4 +16,5 @@ void draw() {
   background (0);
   r2.display();
   r2.move();
+  r2.boom();
 }
