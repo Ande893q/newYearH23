@@ -1,8 +1,8 @@
 class Rocket {
   // attributter
-  PVector pos = new PVector(0, height);
-  float angle=random(1, 7);
-  PVector velocity = new PVector(angle, -3);
+  PVector pos        = new PVector(0, height);
+  float   angle      =random(1, 7);
+  PVector velocity   = new PVector(angle, -3);
 
   // konstruktør
   Rocket() {
@@ -17,23 +17,22 @@ class Rocket {
   }
   
   void move() {
-    velocity.y += 0.05;
-
-    velocity.x = constrain(velocity.x, -2, 2);
-
-    velocity.x *= 0.99;
-
+    // dette forstår jeg ikke
+    //velocity.y += 0.05;
+    velocity.y -= 0.03;
+    velocity.x += 0.01;
+    //velocity.x = constrain(velocity.x, -2, 2);
+    //velocity.x *= 0.99;
     pos.add(velocity);
   }
   
   void boom() {
   }
 }
+
 class Anders extends Rocket {
-
   void boom() {
-    colorMode(HSB);
-
+    //colorMode(HSB);
     float cycle =frameCount;
     float boomDiameter=100;
     float placeHeight1=random(0, height/2);
@@ -43,7 +42,9 @@ class Anders extends Rocket {
     colorMode(HSB);
     color c=color(random(0, 255), random(0, 255), random(0, 255));
 
-
+    println("frameCount "+frameCount);
+    println("frameRate "+frameRate);
+    // Hvad ville der ske hvis din raket var den sidste og frameCount var meget høj?
     if (frameCount<frameRate*5) {
       fill(255-cycle, 255, 255);
       circle(pos.x, pos.y, boomDiameter);
@@ -64,6 +65,8 @@ class Jaunius extends Rocket {
 
     fill(255, 0, 0, alfa) ;
     ellipse(pos.x, pos.y, diameter*2, diameter*2);
+    alfa--; // CB
+    diameter++; // CB
   }
 }
 
