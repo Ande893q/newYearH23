@@ -11,11 +11,11 @@ void setup() {
 
   size(800, 800);
   r = new Rocket();
-  r1= new Anders();
+  r1 = new Anders();
   r2 = new Simon();
   r3 = new Magnus();
   r4 = new fred996v();
-  r5= new Jaunius();
+  r5 = new Jaunius();
 }
 
 void draw() {
@@ -41,13 +41,16 @@ void draw() {
   }
 }
 
-void fireRocket() {
-  counter++;
+void fireRocket(Rocket r) {
   int fcboom = 80;
   if (frameCount>fcboom) {
-    r3.boom();
+    r.boom();
   } else {
-    r3.display();
-    r3.move();
+    r.display();
+    r.move();
   }
+}
+
+void mousePressed() {
+  counter++;
 }

@@ -18,19 +18,13 @@ class Rocket {
 
 
   void move() {
+    velocity.y += 0.05;
+
+    velocity.x = constrain(velocity.x, -2, 2);
+
+    velocity.x *= 0.99;
+
     pos.add(velocity);
-    velocity.y=-6;
-    velocity.x=0.9;
-
-    if (velocity.y<-5) {
-      velocity.y=-2;
-      velocity.y-=0.15;
-      velocity.x+=0.05;
-    }
-
-    if (velocity.x<0) {
-      velocity.x=0.5;
-    }
   }
 
   void boom() {
@@ -63,9 +57,6 @@ class Anders extends Rocket {
 
     colorMode(RGB);
   }
-}
-void explode() {
-}
 }
 
 
