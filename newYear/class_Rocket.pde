@@ -15,7 +15,6 @@ class Rocket {
     int diameter =10;
     circle(pos.x, pos.y, diameter);
   }
-
   
   
   void move(){
@@ -23,9 +22,10 @@ class Rocket {
   velocity.y=-6;
   velocity.x=0.9;
   
-  
   if (velocity.y<-5){
   velocity.y=-2;
+  velocity.y-=0.15;
+  velocity.x+=0.05;
   }
   
   if (velocity.x<0){

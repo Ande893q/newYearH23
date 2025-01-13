@@ -1,5 +1,3 @@
-
-
 Rocket r;  //min raket
 
 Anders r2;
@@ -10,7 +8,7 @@ Jaunius r1;
 
 
 void setup() {
-  
+
   size(800, 800);
   r = new Rocket();
   r1= new Jaunius();
@@ -19,6 +17,7 @@ void setup() {
 }
 
 void draw() {
+  int fcboom = 80;
   background (0);
 
   r.display();
@@ -28,4 +27,10 @@ void draw() {
   r2.display();
   r2.move();
   r2.boom();
+  if (frameCount>fcboom) {
+    r3.boom();
+  } else {
+    r3.display();
+    r3.move();
+  }
 }
