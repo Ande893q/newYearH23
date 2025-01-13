@@ -17,6 +17,7 @@ void setup() {
 
 void draw() {
   background (0);
-  r3.display();
-  r3.move();
+  r2.display();
+  r2.move();
+  r2.boom();
 }
