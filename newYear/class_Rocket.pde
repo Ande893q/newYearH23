@@ -15,8 +15,7 @@ class Rocket {
     int diameter =10;
     circle(pos.x, pos.y, diameter);
   }
-
-
+  
   void move() {
     velocity.y += 0.05;
 
@@ -26,15 +25,13 @@ class Rocket {
 
     pos.add(velocity);
   }
-
+  
   void boom() {
   }
 }
-
 class Anders extends Rocket {
 
   void boom() {
-    // min version
     colorMode(HSB);
 
     float cycle =frameCount;
@@ -58,7 +55,6 @@ class Anders extends Rocket {
     colorMode(RGB);
   }
 }
-
 
 class Jaunius extends Rocket {
   int diameter;

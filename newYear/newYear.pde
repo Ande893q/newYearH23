@@ -5,7 +5,7 @@ Magnus r3;
 fred996v r4;
 Jaunius r5;
 
-int counter;
+int counter = 0;
 
 void setup() {
 
