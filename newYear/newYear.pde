@@ -4,6 +4,7 @@ Anders r2;
 
 Magnus r3;
 
+fred996v rf;
 
 void setup() {
 
@@ -11,6 +12,7 @@ void setup() {
   r = new Rocket();
   r2= new Anders();
   r3 = new Magnus();
+  rf = new fred996v();
 }
 
 void draw() {
@@ -22,6 +24,12 @@ void draw() {
   } else {
     r3.display();
     r3.move();
-
   }
+  
+  if (frameCount>60) {
+      rf.boom();
+    } else {
+      rf.display();
+      rf.move();
+    }
 }
