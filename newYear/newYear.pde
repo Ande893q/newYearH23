@@ -5,7 +5,11 @@ Anders r2;
 Simon r3;
 Magnus r3;
 
+
+fred996v rf;
+
 Jaunius r1;
+
 
 
 void setup() {
@@ -15,9 +19,13 @@ void setup() {
   r1= new Jaunius();
   r2= new Anders();
   r3 = new Magnus();
+
+  rf = new fred996v();
+
   r2=new Anders();
   r3=new Simon();
   r4 = new Magnus();
+
 }
 
 void draw() {
@@ -37,6 +45,12 @@ void draw() {
   } else {
     r3.display();
     r3.move();
-
   }
+  
+  if (frameCount>60) {
+      rf.boom();
+    } else {
+      rf.display();
+      rf.move();
+    }
 }
