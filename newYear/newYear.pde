@@ -1,4 +1,4 @@
-int timer=0;
+
 
 Rocket r;  //min raket
 
