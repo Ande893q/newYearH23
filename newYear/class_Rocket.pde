@@ -16,11 +16,12 @@ class Rocket {
     int diameter =10;
     circle(pos.x, pos.y, diameter);
   }
-
-  void move() {
-    pos.add(velocity);
-    velocity.y+=0.1;
-    velocity.x+=0.1;
+  
+  
+  void move(){
+  pos.add(velocity);
+  velocity.y-=0.15;
+  velocity.x+=0.05;
   }
 
   void boom() {

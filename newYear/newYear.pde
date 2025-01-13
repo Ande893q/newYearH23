@@ -1,5 +1,3 @@
-
-
 Rocket r;  //min raket
 
 Anders r2;
@@ -8,7 +6,7 @@ Magnus r3;
 
 
 void setup() {
-  
+
   size(800, 800);
   r = new Rocket();
   r2= new Anders();
@@ -16,17 +14,14 @@ void setup() {
 }
 
 void draw() {
+  int fcboom = 80;
   background (0);
-  if(frameCount < 30) {
-    r2.move();
-    r2.display();
-  } else {
-    r2.boom();
-  }
-   if(frameCount < 30) {
-    r3.move();
-    r3.display();
-  } else {
+
+  if (frameCount>fcboom) {
     r3.boom();
+  } else {
+    r3.display();
+    r3.move();
+
   }
 }
